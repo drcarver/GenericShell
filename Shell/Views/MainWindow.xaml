@@ -1,0 +1,14 @@
+﻿<Window x:Class="Shell.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        Title="{Binding Path=Title}" Height="350" Width="525" >
+    <Grid>
+        <syncfusion:DockingManager x:Name="BearWare" 
+           prism:RegionManager.RegionName="MainRegion" 
+           UseDocumentContainer="True" DockFill="True" 
+           DockFillDocumentMode="Normal" />
+    </Grid>
+</Window>
