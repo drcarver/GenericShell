@@ -1,6 +1,4 @@
-﻿using System;
-using Core.Interface;
-using Core.Mvvm;
+﻿using Core.Mvvm;
 using Prism.Regions;
 
 namespace Document.Module.ViewModels
@@ -15,9 +13,7 @@ namespace Document.Module.ViewModels
             set => SetProperty(ref _headerName, value);
         }
 
-        public RichTextViewModel(
-            IRegionManager IRegionManager, 
-            IMessageService messageService)
+        public RichTextViewModel(IRegionManager IRegionManager)
         {
         }
     }

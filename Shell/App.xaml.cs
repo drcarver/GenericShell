@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Core.Interface;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;

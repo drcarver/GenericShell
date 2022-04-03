@@ -12,8 +12,8 @@ namespace Document.Module
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
-            //regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(RichTextView));
-            //regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(PDFView));
+            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(RichTextView));
+            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(PDFView));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
