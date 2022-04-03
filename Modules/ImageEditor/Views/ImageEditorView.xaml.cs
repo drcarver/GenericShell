@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace BearWare.ImageEditor.Module.Views
+namespace ImageEditor.Module.Views
 {
     /// <summary>
     /// Interaction logic for ViewA.xaml

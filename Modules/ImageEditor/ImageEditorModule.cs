@@ -1,9 +1,9 @@
-﻿using BearWare.ImageEditor.Module.Views;
+﻿using ImageEditor.Module.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 
-namespace BearWare.ImageEditor.Module
+namespace ImageEditor.Module
 {
     public class ImageEditorModule : IModule
     {

@@ -1,8 +1,7 @@
-﻿using BearWare.Core.Mvvm;
-using BearWare.Services.Interfaces;
+﻿using Core.Mvvm;
 using Prism.Regions;
 
-namespace BearWare.ImageEditor.Module.ViewModels
+namespace ImageEditor.Module.ViewModels
 {
     public class ImageEditorViewModel : ViewModelBase
     {
@@ -12,7 +11,7 @@ namespace BearWare.ImageEditor.Module.ViewModels
             get => _headerName;
             set => SetProperty(ref _headerName, value);
         }
-        public ImageEditorViewModel(IRegionManager IRegionManager, IMessageService messageService )
+        public ImageEditorViewModel(IRegionManager IRegionManager)
         {
         }
     }
