@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Windows.Controls;
-using BearWare;
 using Prism.Regions;
 using Syncfusion.Windows.Tools.Controls;
 

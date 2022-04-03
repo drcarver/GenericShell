@@ -5,7 +5,7 @@ namespace Shell.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
-        private string _title = "BearWare";
+        private string _title = "Generic Shell";
         public string Title
         {
             get => _title;

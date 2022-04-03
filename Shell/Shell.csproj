@@ -1,25 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
-    <UseWPF>true</UseWPF>
-    <AssemblyName>BearWare</AssemblyName>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<AssemblyName>GenericShell</AssemblyName>
+		<BaseOutputPath>C:\Users\drcarver\Desktop\codegen\GenericShell\bin\</BaseOutputPath>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+		<PackageReference Include="Syncfusion.Tools.WPF" Version="19.4.0.56" />
+	</ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BearWare.Core\BearWare.Core.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.Excel\BearWare.Excel.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.ImageEditor\BearWare.ImageEditor.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.Kanban\BearWare.Kanban.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.MSProject\BearWare.MSProject.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.MSWord\BearWare.MSWord.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.PDF\BearWare.PDF.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.Scheduling\BearWare.Scheduling.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.SpreadSheet\BearWare.SpreadSheet.Module.csproj" />
-    <ProjectReference Include="..\Modules\BearWare.SQL\BearWare.SQL.Module.csproj" />
-    <ProjectReference Include="..\Services\BearWare.Services.Interfaces\BearWare.Services.Interfaces.csproj" />
-    <ProjectReference Include="..\Services\BearWare.Services\BearWare.Services.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Modules\Auth\Auth.Module.csproj" />
+    <ProjectReference Include="..\Modules\Document\Document.Module.csproj" />
   </ItemGroup>
 </Project>

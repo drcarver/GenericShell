@@ -31,7 +31,7 @@ namespace Shell
                 //are we dealing with a ContentPane directly
                 if (Region.Views.Contains(item) && Region.ActiveViews.Contains(item))
                 {
-                    if (Region.Name != BearWare.Core.RegionNames.MainRegion)
+                    if (Region.Name != Core.RegionNames.MainRegion)
                     {
                         Region.Deactivate(item);
                     }

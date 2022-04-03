@@ -1,14 +1,4 @@
 ﻿using System.Windows;
-using BearWare.ImageEditor.Module;
-using BearWare.Kanban.Module;
-using BearWare.MSProject.Module;
-using BearWare.MSWord.Module;
-using BearWare.PDF.Module;
-using BearWare.Scheduling.Module;
-using BearWare.Services;
-using BearWare.Services.Interfaces;
-using BearWare.SpreadSheet.Module;
-using BearWare.SQL.Module;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
@@ -22,6 +12,11 @@ namespace Shell
     /// </summary>
     public partial class App
     {
+#if DEBUG
+        private const string MODULEPATH = @".\";
+#else
+        private const string MODULEPATH = @"..\modules\";
+#endif
         protected override Window CreateShell()
         {
             //iRegionManager.RequestNavigate(Core.RegionNames.MainRegion, nameof(PDFView));
@@ -30,23 +25,27 @@ namespace Shell
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IMessageService, MessageService>();
+            //containerRegistry.RegisterSingleton<IMessageService, MessageService>();
         }
         protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
         {
             base.ConfigureRegionAdapterMappings(regionAdapterMappings);
             regionAdapterMappings.RegisterMapping(typeof(DockingManager), Container.Resolve<DockingManagerRegionAdapter>());
         }
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            return new DirectoryModuleCatalog() { ModulePath = MODULEPATH };
+        }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule(typeof(ExcelModule));
-            moduleCatalog.AddModule(typeof(ImageEditorModule));
-            moduleCatalog.AddModule(typeof(KanbanModule));
-            moduleCatalog.AddModule(typeof(MSProjectModule));
-            moduleCatalog.AddModule(typeof(MSWordModule));
-            moduleCatalog.AddModule(typeof(PDFModule));
-            moduleCatalog.AddModule(typeof(SchedulingModule));
-            moduleCatalog.AddModule(typeof(SQLModule));
+            //moduleCatalog.AddModule(typeof(ExcelModule));
+            //moduleCatalog.AddModule(typeof(ImageEditorModule));
+            //moduleCatalog.AddModule(typeof(KanbanModule));
+            //moduleCatalog.AddModule(typeof(MSProjectModule));
+            //moduleCatalog.AddModule(typeof(MSWordModule));
+            //moduleCatalog.AddModule(typeof(PDFModule));
+            //moduleCatalog.AddModule(typeof(SchedulingModule));
+            //moduleCatalog.AddModule(typeof(SQLModule));
         }
     }
 }
