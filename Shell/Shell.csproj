@@ -22,6 +22,7 @@
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\Modules\Auth\Auth.Module.csproj" />
     <ProjectReference Include="..\Modules\Document\Document.Module.csproj" />
+    <ProjectReference Include="..\Modules\Gantt\Gantt.Module.csproj" />
     <ProjectReference Include="..\Modules\ImageEditor\ImageEditor.Module.csproj" />
   </ItemGroup>
 </Project>

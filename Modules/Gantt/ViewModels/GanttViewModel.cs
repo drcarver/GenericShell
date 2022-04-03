@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using BearWare.Core.Mvvm;
-using BearWare.Services.Interfaces;
+using Core.Mvvm;
 using Prism.Regions;
 using Syncfusion.Windows.Controls.Gantt;
 
-namespace BearWare.MSProject.Module.ViewModels
+namespace Gantt.Module.ViewModels
 {
-    public class MSProjectViewModel : ViewModelBase
+    public class GanttViewModel : ViewModelBase
     {
-        private string _headerName = "Gant Chart";
+        private string _headerName = "Gantt Chart";
 
         public string HeaderName
         {
@@ -17,7 +16,7 @@ namespace BearWare.MSProject.Module.ViewModels
             set => SetProperty(ref _headerName, value);
         }
 
-        public MSProjectViewModel(IRegionManager IRegionManager, IMessageService messageService)
+        public GanttViewModel(IRegionManager IRegionManager)
         {
             GetTasks();
         }
